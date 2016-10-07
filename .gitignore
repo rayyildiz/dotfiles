@@ -1,5 +1,6 @@
 .sbt/
 .ivy2/
+.Trash/
 Trash/
 UserSettings.xml
 workspace/
@@ -19,6 +20,17 @@ Applications/
 .ackrc
 .agignore
 *~
+.babel.json
+.bash_history
+.node-gyp/
+.pgpass
+.wget-hsts
+".zcompdump-*
+.zsh-update
+.zshrc.backup
+.zshrc.backup1
+elm-package.cdoc
+elm-package.json
 *.log
 leksah.lkshw
 .zshenv
