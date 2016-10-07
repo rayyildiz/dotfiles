@@ -13,13 +13,21 @@ Downloads/
 Desktop/
 Documents/
 Applications/
+.DS_Store
 
+
+*~
 *.log
+leksah.lkshw
+.zshenv
+.zsh_history
+.zsh_update
+.zlogout
+.zprofile
+.sh_history
 
-.zshrc_update
 
-
-
+.m2/
 .vim/
 .ssh/
 .subversion/
