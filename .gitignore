@@ -15,7 +15,9 @@ Documents/
 Applications/
 .DS_Store
 
-
+.CFUserTextEncoding
+.ackrc
+.agignore
 *~
 *.log
 leksah.lkshw
@@ -27,6 +29,8 @@ leksah.lkshw
 .sh_history
 
 
+.cocos/
+.emacs.d/
 .m2/
 .vim/
 .ssh/
