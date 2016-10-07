@@ -20,7 +20,10 @@ Applications/
 .ackrc
 .agignore
 *~
+.emulator_console_auth_token
 .babel.json
+.viminfo
+
 .bash_history
 .node-gyp/
 .pgpass
