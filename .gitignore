@@ -21,14 +21,15 @@ Applications/
 .agignore
 *~
 .emulator_console_auth_token
+.zcompdump*
 .babel.json
 .viminfo
-
+.config/
+.oh-my-zsh/
 .bash_history
 .node-gyp/
 .pgpass
 .wget-hsts
-".zcompdump-*
 .zsh-update
 .zshrc.backup
 .zshrc.backup1
