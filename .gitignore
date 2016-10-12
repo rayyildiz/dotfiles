@@ -15,6 +15,9 @@ Desktop/
 Documents/
 Applications/
 .DS_Store
+.aws/
+.opam/
+.scala_history
 
 .CFUserTextEncoding
 .ackrc
