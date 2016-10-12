@@ -9,10 +9,18 @@
 
 
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (jsx-mode flycheck web-mode dockerfile-mode go magit git projectile shell-here go-autocomplete exec-path-from-shell neotree ensime company-go go-eldoc go-mode))))
+    (merlin jsx-mode flycheck web-mode dockerfile-mode go magit git projectile shell-here go-autocomplete exec-path-from-shell neotree ensime company-go go-eldoc go-mode))))
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
 
 
@@ -69,3 +77,4 @@
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
+(load "/Users/rayyildiz/.opam/4.02.1/share/emacs/site-lisp/tuareg-site-file")
