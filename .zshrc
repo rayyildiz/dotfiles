@@ -51,7 +51,7 @@ DEFAULT_USER="rayyildiz"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git golang adb battery bower brew cabal colorize docker emacs gb heroku grunt gulp nvm node pip python sbt scala sublime sudo svn terraform xcode)
+plugins=(mvn git golang adb battery bower brew cabal colorize docker emacs gb heroku grunt gulp nvm node pip python sbt scala sublime sudo svn terraform xcode)
 
 # User configuration
 
@@ -89,9 +89,10 @@ source $ZSH/oh-my-zsh.sh
 
 export GOPATH="/Users/rayyildiz/workspace/gopath"
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN:"/Developer/go_appengine"
+export MAVEN_HOME=/Developer/apache-maven-3.3.9
+export PYTHON2_HOME=/Users/rayyildiz/Library/Python/2.7
 
-
+export PATH=$PATH:$GOBIN:"/Developer/go_appengine":$MAVEN_HOME/bin:$PYTHON2_HOME/bin
 
 export NVM_DIR="/Users/rayyildiz/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
