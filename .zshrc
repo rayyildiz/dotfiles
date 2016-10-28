@@ -109,12 +109,17 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 export ACTIVATOR_HOME=/Developer/activator-dist-1.3.10
 export ANDROID_NDK=/Developer/android-ndk-r12b
+export ANDROID_HOME=/Users/rayyildiz/Library/Android/sdk
 
 # Add environment variable COCOS_X_ROOT for cocos2d-x
 export COCOS_X_ROOT=/Developer
 export PATH=$COCOS_X_ROOT:$PATH
-export PATH=$PATH:$ACTIVATOR_HOME/bin:$ANDROID_NDK
+export PATH=$PATH:$ACTIVATOR_HOME/bin:$ANDROID_NDK:$ANDROID_HOME/tools
 
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
 export COCOS_TEMPLATES_ROOT=/Developer/cocos2d-x-3.12/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/rayyildiz/.sdkman"
+[[ -s "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh"

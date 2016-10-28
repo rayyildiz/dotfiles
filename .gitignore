@@ -18,6 +18,10 @@ Applications/
 .aws/
 .opam/
 .scala_history
+.kotlin_history
+.profile
+.sdkman/
+Creative Cloud Files/
 
 .CFUserTextEncoding
 .ackrc
