@@ -93,35 +93,28 @@ export MAVEN_HOME=/Developer/apache-maven-3.3.9
 export PYTHON2_HOME=/Users/rayyildiz/Library/Python/2.7
 export GRADLE_HOME=/Developer/gradle-3.1
 
-export PATH=$PATH:$GOBIN:"/Developer/go_appengine":$MAVEN_HOME/bin:$PYTHON2_HOME/bin
+export PATH=$PATH:$GOBIN:$MAVEN_HOME/bin:$PYTHON2_HOME/bin
 export PATH=$PATH:$GRADLE_HOME/bin
 
 export NVM_DIR="/Users/rayyildiz/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/Developer/google-cloud-sdk/path.zsh.inc'
-
-# The next line enables shell command completion for gcloud.
-source '/Developer/google-cloud-sdk/completion.zsh.inc'
-
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Developer/cocos2d-x-3.12/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
 export ACTIVATOR_HOME=/Developer/activator-dist-1.3.10
 export ANDROID_NDK=/Developer/android-ndk-r12b
 export ANDROID_HOME=/Users/rayyildiz/Library/Android/sdk
 
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT=/Developer
-export PATH=$COCOS_X_ROOT:$PATH
 export PATH=$PATH:$ACTIVATOR_HOME/bin:$ANDROID_NDK:$ANDROID_HOME/tools
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT=/Developer/cocos2d-x-3.12/templates
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/rayyildiz/.sdkman"
 [[ -s "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Developer/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Developer/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Developer/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Developer/google-cloud-sdk/completion.zsh.inc'
+fi

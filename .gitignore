@@ -22,6 +22,7 @@ Applications/
 .profile
 .sdkman/
 Creative Cloud Files/
+.appcfg_oauth2_tokens
 
 .CFUserTextEncoding
 .ackrc
