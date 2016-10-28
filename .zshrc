@@ -91,8 +91,10 @@ export GOPATH="/Users/rayyildiz/workspace/gopath"
 export GOBIN=$GOPATH/bin
 export MAVEN_HOME=/Developer/apache-maven-3.3.9
 export PYTHON2_HOME=/Users/rayyildiz/Library/Python/2.7
+export GRADLE_HOME=/Developer/gradle-3.1
 
 export PATH=$PATH:$GOBIN:"/Developer/go_appengine":$MAVEN_HOME/bin:$PYTHON2_HOME/bin
+export PATH=$PATH:$GRADLE_HOME/bin
 
 export NVM_DIR="/Users/rayyildiz/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
