@@ -1,3 +1,4 @@
+letsencrypt/
 .sbt/
 .ivy2/
 .Trash/
