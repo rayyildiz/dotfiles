@@ -105,6 +105,11 @@ export ANDROID_HOME=/Users/rayyildiz/Library/Android/sdk
 
 export PATH=$PATH:$ACTIVATOR_HOME/bin:$ANDROID_NDK:$ANDROID_HOME/tools
 
+# Rustlang
+if [ -f ~/.cargo/env ]; then
+   source ~/.cargo/env
+fi
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/rayyildiz/.sdkman"
 [[ -s "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh"

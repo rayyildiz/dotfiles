@@ -27,6 +27,8 @@ Creative Cloud Files/
 .boto
 .netrc
 .nuget/
+.cargo/
+.multirust/
 
 .CFUserTextEncoding
 .ackrc
