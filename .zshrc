@@ -92,9 +92,7 @@ export GOBIN=$GOPATH/bin
 export MAVEN_HOME=/Developer/apache-maven-3.3.9
 export PYTHON2_HOME=/Users/rayyildiz/Library/Python/2.7
 export GRADLE_HOME=/Developer/gradle-3.1
-
-export PATH=$PATH:$GOBIN:$MAVEN_HOME/bin:$PYTHON2_HOME/bin
-export PATH=$PATH:$GRADLE_HOME/bin
+export ERL_PATH=/usr/local/Cellar/erlang/19.1
 
 export NVM_DIR="/Users/rayyildiz/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -103,6 +101,8 @@ export ACTIVATOR_HOME=/Developer/activator-dist-1.3.10
 export ANDROID_NDK=/Developer/android-ndk-r12b
 export ANDROID_HOME=/Users/rayyildiz/Library/Android/sdk
 
+export PATH=$PATH:$GOBIN:$MAVEN_HOME/bin:$PYTHON2_HOME/bin
+export PATH=$PATH:$GRADLE_HOME/bin:$ERL_PATH/bin
 export PATH=$PATH:$ACTIVATOR_HOME/bin:$ANDROID_NDK:$ANDROID_HOME/tools
 
 # Rustlang
