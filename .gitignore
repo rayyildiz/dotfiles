@@ -29,6 +29,11 @@ Creative Cloud Files/
 .nuget/
 .cargo/
 .multirust/
+.cpan/
+.cpanm/
+.stack/
+.vscode-react-native/
+.vscode/
 
 .CFUserTextEncoding
 .ackrc
