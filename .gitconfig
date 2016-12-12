@@ -5,3 +5,7 @@
 	default = matching
 [core]
 	autocrlf = input
+
+[credential "https://git-codecommit.*.amazonaws.com"]
+    helper = !aws codecommit credential-helper $@
+    UseHttpPath = true

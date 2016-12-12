@@ -35,6 +35,21 @@ Creative Cloud Files/
 .vscode-react-native/
 .vscode/
 
+.anaconda/
+.condarc
+.credentials/
+.embedmongo/
+.ipython/
+.jupyter/
+.loadui/
+.matplotlib/
+.profile-anaconda.bak
+.python/
+.readyapi/
+.soapui/
+default-soapui-workspace.xml
+soapui-settings.xml
+
 .CFUserTextEncoding
 .ackrc
 .agignore

@@ -101,6 +101,8 @@ export ACTIVATOR_HOME=/Developer/activator-dist-1.3.12
 export ANDROID_NDK=/Developer/android-ndk-r12b
 export ANDROID_HOME=/Users/rayyildiz/Library/Android/sdk
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+
 export PATH=$PATH:$GOBIN:$MAVEN_HOME/bin:$PYTHON2_HOME/bin
 export PATH=$PATH:$GRADLE_HOME/bin:$ERL_PATH
 export PATH=$PATH:$ACTIVATOR_HOME/bin:$ANDROID_NDK:$ANDROID_HOME/tools
