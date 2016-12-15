@@ -19,7 +19,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ac-alchemist el-get alchemist elixir-mix elixir-mode yaml-mode kotlin-mode nasm-mode gccsense merlin jsx-mode flycheck web-mode dockerfile-mode go magit git projectile shell-here go-autocomplete exec-path-from-shell neotree ensime company-go go-eldoc go-mode))))
+    (haskell-mode ac-alchemist el-get alchemist elixir-mix elixir-mode yaml-mode kotlin-mode nasm-mode gccsense merlin jsx-mode flycheck web-mode dockerfile-mode go magit git projectile shell-here go-autocomplete exec-path-from-shell neotree ensime company-go go-eldoc go-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -87,4 +87,21 @@
 (unless (package-installed-p 'elixir-mode)
   (package-install 'elixir-mode))
 
+;; Haskell
+(custom-set-variables
+  '(haskell-process-suggest-remove-import-lines t)
+  '(haskell-process-auto-import-loaded-modules t)
+  '(haskell-process-log t))
+(eval-after-load 'haskell-mode '(progn
+  (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+  (define-key haskell-mode-map (kbd "C-c C-z") 'haskell-interactive-switch)
+  (define-key haskell-mode-map (kbd "C-c C-n C-t") 'haskell-process-do-type)
+  (define-key haskell-mode-map (kbd "C-c C-n C-i") 'haskell-process-do-info)
+  (define-key haskell-mode-map (kbd "C-c C-n C-c") 'haskell-process-cabal-build)
+  (define-key haskell-mode-map (kbd "C-c C-n c") 'haskell-process-cabal)))
+(eval-after-load 'haskell-cabal '(progn
+  (define-key haskell-cabal-mode-map (kbd "C-c C-z") 'haskell-interactive-switch)
+  (define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
+  (define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
+  (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
 
