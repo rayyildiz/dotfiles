@@ -16,6 +16,7 @@ Desktop/
 Documents/
 Applications/
 .DS_Store
+VirtualBox VMs/
 .aws/
 .opam/
 .scala_history
