@@ -51,7 +51,7 @@ DEFAULT_USER="rayyildiz"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(mvn git golang adb battery bower brew cabal colorize docker emacs gb heroku grunt gulp nvm node pip python sbt scala sublime sudo svn terraform xcode)
+plugins=(nix mvn git golang adb battery bower brew cabal colorize docker emacs gb heroku grunt gulp nvm node pip python sbt scala sublime sudo svn terraform xcode)
 
 # User configuration
 
@@ -107,14 +107,16 @@ export PATH=$PATH:$GOBIN:$MAVEN_HOME/bin:$PYTHON2_HOME/bin
 export PATH=$PATH:$GRADLE_HOME/bin:$ERL_PATH
 export PATH=$PATH:$ACTIVATOR_HOME/bin:$ANDROID_NDK:$ANDROID_HOME/tools
 
+# NixOS
+if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
+    source ~/.nix-profile/etc/profile.d/nix.sh
+fi
+
 # Rustlang
 if [ -f ~/.cargo/env ]; then
    source ~/.cargo/env
 fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/rayyildiz/.sdkman"
-[[ -s "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Developer/google-cloud-sdk/path.zsh.inc ]; then
