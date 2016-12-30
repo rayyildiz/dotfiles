@@ -35,7 +35,8 @@ Creative Cloud Files/
 .stack/
 .vscode-react-native/
 .vscode/
-
+.nix-profile
+.nix-defexpr/
 .anaconda/
 .condarc
 .credentials/
