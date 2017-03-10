@@ -76,8 +76,6 @@ leksah.lkshw
 .zshenv
 .zsh_history
 .zsh_update
-.zlogout
-.zprofile
 .sh_history
 
 
@@ -127,4 +125,14 @@ leksah.lkshw
 .ammonite/
 .activator/
 
-
+.IdentityService/
+.bundle/
+.lazybones/
+.multirust
+.rustup/
+.rvm/
+.storjcli/
+.wakatime.cfg
+.wakatime.data
+.wakatime.db
+.wakatime/

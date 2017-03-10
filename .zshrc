@@ -51,7 +51,7 @@ DEFAULT_USER="rayyildiz"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(nix mvn git golang adb battery bower brew cabal colorize docker emacs gb heroku grunt gulp nvm node pip python sbt scala sublime sudo svn terraform xcode)
+plugins=(zsh-wakatime nix sdk sublime  mvn git golang adb battery bower brew cabal colorize docker emacs gb heroku grunt gulp nvm node pip python sbt scala sublime sudo svn terraform xcode)
 
 # User configuration
 
@@ -89,10 +89,11 @@ source $ZSH/oh-my-zsh.sh
 
 export GOPATH="/Users/rayyildiz/workspace/gopath"
 export GOBIN=$GOPATH/bin
+export GOAPP_ENGINE=/Developer/google-cloud-sdk/platform/google_appengine
 export MAVEN_HOME=/Developer/apache-maven-3.3.9
 export PYTHON2_HOME=/Users/rayyildiz/Library/Python/2.7
 export GRADLE_HOME=/Developer/gradle-3.1
-export ERL_PATH=/usr/local/Cellar/erlang/19.1/bin/erl
+export ERL_PATH=/usr/local/Cellar/erlang/19.2.3/bin/erl
 
 export NVM_DIR="/Users/rayyildiz/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -101,11 +102,12 @@ export ACTIVATOR_HOME=/Developer/activator-dist-1.3.12
 export ANDROID_NDK=/Developer/android-ndk-r12b
 export ANDROID_HOME=/Users/rayyildiz/Library/Android/sdk
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
 
 export PATH=$PATH:$GOBIN:$MAVEN_HOME/bin:$PYTHON2_HOME/bin
 export PATH=$PATH:$GRADLE_HOME/bin:$ERL_PATH
 export PATH=$PATH:$ACTIVATOR_HOME/bin:$ANDROID_NDK:$ANDROID_HOME/tools
+export PATH=$PATH:$GOAPP_ENGINE/goroot/bin
 
 # NixOS
 if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
@@ -127,3 +129,10 @@ fi
 if [ -f /Developer/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Developer/google-cloud-sdk/completion.zsh.inc'
 fi
+eval $(/usr/libexec/path_helper -s)
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/rayyildiz/.sdkman"
+[[ -s "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh"

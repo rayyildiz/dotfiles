@@ -81,8 +81,6 @@
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
-(load "/Users/rayyildiz/.opam/4.02.1/share/emacs/site-lisp/tuareg-site-file")
-
 
 (unless (package-installed-p 'elixir-mode)
   (package-install 'elixir-mode))
@@ -106,4 +104,3 @@
   (define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)))
 
 
-(load-file "~/.emacs.d/flow-for-emacs/flow.el")
