@@ -1,4 +1,5 @@
 letsencrypt/
+.gauge/
 .sbt/
 .ivy2/
 .Trash/
