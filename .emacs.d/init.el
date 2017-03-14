@@ -25,7 +25,7 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(package-selected-packages
    (quote
-    (with-editor yasnippet scala-mode sbt-mode s magit-popup git-commit f dash company auto-complete async haskell-mode ac-alchemist el-get alchemist elixir-mix elixir-mode yaml-mode kotlin-mode nasm-mode gccsense merlin jsx-mode flycheck web-mode dockerfile-mode go magit git projectile shell-here go-autocomplete exec-path-from-shell neotree ensime company-go go-eldoc go-mode))))
+    (wakatime-mode with-editor yasnippet scala-mode sbt-mode s magit-popup git-commit f dash company auto-complete async haskell-mode ac-alchemist el-get alchemist elixir-mix elixir-mode yaml-mode kotlin-mode nasm-mode gccsense merlin jsx-mode flycheck web-mode dockerfile-mode go magit git projectile shell-here go-autocomplete exec-path-from-shell neotree ensime company-go go-eldoc go-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
