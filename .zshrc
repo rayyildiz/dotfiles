@@ -93,7 +93,7 @@ export GOAPP_ENGINE=/Developer/google-cloud-sdk/platform/google_appengine
 export MAVEN_HOME=/Developer/apache-maven-3.3.9
 export PYTHON2_HOME=/Users/rayyildiz/Library/Python/2.7
 export GRADLE_HOME=/Developer/gradle-3.1
-export ERL_PATH=/usr/local/Cellar/erlang/19.2.3/bin/erl
+export ERL_PATH=/usr/local/Cellar/erlang/19.3/bin/erl
 
 export NVM_DIR="/Users/rayyildiz/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
