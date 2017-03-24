@@ -20,7 +20,7 @@ DEFAULT_USER="rayyildiz"
 # DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+export UPDATE_ZSH_DAYS=3
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -42,7 +42,7 @@ DEFAULT_USER="rayyildiz"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="dd.mm.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -99,7 +99,7 @@ export NVM_DIR="/Users/rayyildiz/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export ACTIVATOR_HOME=/Developer/activator-dist-1.3.12
-export ANDROID_NDK=/Developer/android-ndk-r12b
+export ANDROID_NDK=/Developer/android-ndk-r14b
 export ANDROID_HOME=/Users/rayyildiz/Library/Android/sdk
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
