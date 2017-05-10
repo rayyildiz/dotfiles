@@ -1,3 +1,13 @@
+.appcfg_nag
+.blockstack-server/
+.blockstack/
+.dotnet/
+.idlerc/
+.mono/
+.pylint.d/
+.templateengine/
+.virtualchain-spv-headers.dat
+.wapi/
 letsencrypt/
 .gauge/
 .sbt/
