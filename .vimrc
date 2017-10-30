@@ -140,7 +140,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'tpope/vim-unimpaired'
 
 " Wakatime
-Plugin 'wakatime/vim-wakatime'
+" Plugin 'wakatime/vim-wakatime'
 
 " NeoComplete
 if has("nvim")
