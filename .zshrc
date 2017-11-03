@@ -51,7 +51,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-wakatime nix sdk sublime  mvn git golang adb battery bower brew cabal colorize docker emacs gb heroku grunt gulp nvm node pip python sbt scala sublime sudo svn terraform xcode)
+plugins=(sublime git golang adb battery cabal colorize docker emacs heroku nvm pip python sudo svn)
 
 # User configuration
 
