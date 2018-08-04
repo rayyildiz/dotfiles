@@ -16,6 +16,12 @@ function backup() {
 
 # Update and upgrade ubuntu dependencies
 function update() {
+    echo "add sbt key and reguired repositories"
+    echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+
+    sudo add-apt-repository ppa:linuxuprising/java
+
     sudo apt-get update -y && sudo apt-get upgrade -y
 }
 
@@ -36,33 +42,20 @@ function install_base() {
 
 # install developer software and dependencies
 function install_dev() {
-    echo "installing jdk-8 and jdk-10"
+    echo "installing openjdk-8,openjdk-10, sbt"
     sudo apt-get install -y \
-        openjdk-8-jdk
+        openjdk-8-jdk \
+        sbt
         # openjdk-10-jdk
+
+    echo "install oracle jdk-10"
+    sudo apt-get install -y oracle-java10-installer
 
     echo "installing golang"
     snap install go --classic
 
     echo "installing idea ultimate edition"
     snap install intellij-idea-ultimate --classic
-
-
-    echo "install oh-my-zsh"
-    wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
-
-    echo "installing zsh theme"
-    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-
-    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-    echo "install Vundle.vim plugin"
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    cp .vimrc $HOME/.vimrc
-    vim +PluginInstall +qall
-
-    echo "update scalafmt"
-    cp .scalafmt.conf $HOME/.scalafmt.conf
 }
 
 
@@ -88,6 +81,10 @@ function setup_dev() {
 
     echo "global ignore file"
     cp .gitignore $HOME/.gitignore
+
+
+    echo "select default java version"
+    sudo update-alternatives --config java
 }
 
 
