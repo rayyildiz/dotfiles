@@ -8,8 +8,9 @@ function backup() {
 
     mkdir -p $HOME/dotfiles_backup
 
-    cp -n $HOME/.zshrc $HOME/dotfiles_backup/.zshrc
-    cp -n $HOME/.vimrc $HOME/dotfiles_backup/.vimrc
+    cp $HOME/.zshrc $HOME/dotfiles_backup/.zshrc
+    cp $HOME/.vimrc $HOME/dotfiles_backup/.vimrc
+    cp $HOME/.scalafmt.conf $HOME/dotfiles_backup/.scalafmt.conf
 }
 
 # Update and upgrade ubuntu dependencies
@@ -58,11 +59,36 @@ function install_dev() {
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     cp .vimrc $HOME/.vimrc
     vim +PluginInstall +qall
+
+    echo "update scalafmt"
+    cp .scalafmt.conf $HOME/.scalafmt.conf
 }
 
 
-# Install media
-function install_media() {
+# setup dev env
+function setup_dev() {
+    echo "update default terminal as ZSH"
+    chsh -s $(which zsh)
+
+    echo "install oh-my-zsh"
+    wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
+    echo "installing zsh theme"
+    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+    echo "install Vundle.vim plugin"
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    cp .vimrc $HOME/.vimrc
+    vim +PluginInstall +qall
+
+    echo "update scalafmt"
+    cp .scalafmt.conf $HOME/.scalafmt.conf
+}
+
+
+# Install other software (music player, ...)
+function install_other() {
     echo "installing vlc"
     snap install vlc
 }
@@ -75,7 +101,8 @@ case "$1" in
         update
         install_base
         install_dev
-        install_media
+        install_other
+        setup_dev
         ;;
     *)
         ;;

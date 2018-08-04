@@ -5,6 +5,7 @@ These files bootstrap my development setup. This setup includes:
 - vim configurations.
 - Global git ignore file.
 - ZSH ( [spaceship](https://github.com/denysdovhan/spaceship-prompt) theme )
+- [Scalafmt](https://scalameta.org/scalafmt/)
 
 ## Install
 
