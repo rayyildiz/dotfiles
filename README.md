@@ -1,10 +1,16 @@
-Dotfiles
-===
+# Dotfiles
 
-It includes
+These files bootstrap my development setup. This setup includes:
 
-* Emacs
-  - Golang
-  - Ensime
-* Vim
-* ZSH
+- vim configurations.
+- Global git ignore file.
+- ZSH ( [spaceship](https://github.com/denysdovhan/spaceship-prompt) theme )
+
+## Install
+
+```bash
+git clone https://github.com/rayyildiz/dotfiles.git
+cd dotfiles
+./bootstrap.sh ubuntu
+```
+
