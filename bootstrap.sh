@@ -8,10 +8,10 @@ function backup() {
 
     mkdir -p $HOME/dotfiles_backup
 
-    cp $HOME/.zshrc $HOME/dotfiles_backup/.zshrc
-    cp $HOME/.vimrc $HOME/dotfiles_backup/.vimrc
-    cp $HOME/.scalafmt.conf $HOME/dotfiles_backup/.scalafmt.conf
-    cp $HOME/.gitignore $HOME/dotfiles_backup/.gitignore
+    [[ -f $HOME/.zshrc ]] && cp -u -p -i $HOME/.zshrc $HOME/dotfiles_backup/.zshrc
+    [[ -f $HOME/.vimrc ]] && cp -u -p -i $HOME/.vimrc $HOME/dotfiles_backup/.vimrc
+    [[ -f $HOME/.scalafmt.conf ]] && cp -u -p -i $HOME/.scalafmt.conf $HOME/dotfiles_backup/.scalafmt.conf
+    [[ -f $HOME/.gitignore ]] && cp -u -p -i $HOME/.gitignore $HOME/dotfiles_backup/.gitignore
 }
 
 # Update and upgrade ubuntu dependencies
@@ -68,8 +68,8 @@ function setup_dev() {
     wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 
     echo "installing zsh theme"
-    git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-    ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+    git clone https://github.com/denysdovhan/spaceship-prompt.git "$HOME/.oh-my-zsh/custom/themes/spaceship-prompt"
+    ln -s "$HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
 
     echo "install Vundle.vim plugin"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
