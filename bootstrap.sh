@@ -11,6 +11,7 @@ function backup() {
     cp $HOME/.zshrc $HOME/dotfiles_backup/.zshrc
     cp $HOME/.vimrc $HOME/dotfiles_backup/.vimrc
     cp $HOME/.scalafmt.conf $HOME/dotfiles_backup/.scalafmt.conf
+    cp $HOME/.gitignore $HOME/dotfiles_backup/.gitignore
 }
 
 # Update and upgrade ubuntu dependencies
@@ -84,6 +85,9 @@ function setup_dev() {
 
     echo "update scalafmt"
     cp .scalafmt.conf $HOME/.scalafmt.conf
+
+    echo "global ignore file"
+    cp .gitignore $HOME/.gitignore
 }
 
 
