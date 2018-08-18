@@ -98,7 +98,7 @@ function install_other() {
 case "$1" in
     "ubuntu")
         echo "installing software and depdendencies for ubuntu"
-        backup
+#        backup
         update
         install_base
         install_dev
