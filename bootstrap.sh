@@ -52,10 +52,10 @@ function install_dev() {
     sudo apt-get install -y oracle-java10-installer
 
     echo "installing golang"
-    snap install go --classic
+    sudo snap install go --classic
 
     echo "installing idea ultimate edition"
-    snap install intellij-idea-ultimate --classic
+    sudo snap install intellij-idea-ultimate --classic
 }
 
 
@@ -91,7 +91,7 @@ function setup_dev() {
 # Install other software (music player, ...)
 function install_other() {
     echo "installing vlc"
-    snap install vlc
+    sudo snap install vlc
 }
 
 
