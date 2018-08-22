@@ -49,13 +49,23 @@ function install_dev() {
         # openjdk-10-jdk
 
     echo "install oracle jdk-10"
-    sudo apt-get install -y oracle-java10-installer
+    read -p "Do you wish to install Oracle JDK 10 [y/N]?" yn1
+    case $yn1 in
+        [Yy]* )  sudo apt-get install -y oracle-java10-installer; break;;
+        * ) echo "JDK-10 won't install";;
+    esac
 
-    echo "installing golang"
-    sudo snap install go --classic
+    read -p "Do you wish to install GOLANG [y/N]?" yn2
+    case $yn2 in
+        [Yy]* )  sudo snap install go --classic; break;;
+        * ) echo "Golang won't install";;
+    esac
 
-    echo "installing idea ultimate edition"
-    sudo snap install intellij-idea-ultimate --classic
+    read -p "Do you wish to install Intellij IDEA Ultimate Edition [y/N]?" yn3
+    case $yn3 in
+        [Yy]* )  sudo snap install intellij-idea-ultimate --classic; break;;
+        * ) echo "intellij-idea-ultimate won't install";;
+    esac    
 }
 
 
@@ -82,7 +92,6 @@ function setup_dev() {
     echo "global ignore file"
     cp .gitignore $HOME/.gitignore
 
-
     echo "select default java version"
     sudo update-alternatives --config java
 }
@@ -90,8 +99,11 @@ function setup_dev() {
 
 # Install other software (music player, ...)
 function install_other() {
-    echo "installing vlc"
-    sudo snap install vlc
+    read -p "Do you wish to install Intellij VLC [y/N]?" yn
+    case $yn in
+        [Yy]* )  sudo snap install vlc; break;;
+        * ) echo "VLC won't install";;
+    esac    
 }
 
 
