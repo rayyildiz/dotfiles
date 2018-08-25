@@ -23,8 +23,9 @@ function update() {
     sudo add-apt-repository ppa:linuxuprising/java
 
     sudo apt-get update -y && sudo apt-get upgrade -y
-}
 
+    sudo snap refresh
+}
 
 # Install base software
 function install_base() {
@@ -38,7 +39,6 @@ function install_base() {
         htop \
         zsh
 }
-
 
 # install developer software and dependencies
 function install_dev() {
@@ -65,9 +65,8 @@ function install_dev() {
     case $yn3 in
         [Yy]* )  sudo snap install intellij-idea-ultimate --classic; break;;
         * ) echo "intellij-idea-ultimate won't install";;
-    esac    
+    esac
 }
-
 
 # setup dev env
 function setup_dev() {
@@ -96,16 +95,14 @@ function setup_dev() {
     sudo update-alternatives --config java
 }
 
-
 # Install other software (music player, ...)
 function install_other() {
     read -p "Do you wish to install Intellij VLC [y/N]?" yn
     case $yn in
         [Yy]* )  sudo snap install vlc; break;;
         * ) echo "VLC won't install";;
-    esac    
+    esac
 }
-
 
 case "$1" in
     "ubuntu")
