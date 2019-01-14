@@ -1,13 +1,15 @@
 # Dotfiles
 
-These files bootstrap my development setup. This setup includes:
+These files prepares a development environment for you. This bootstrap includes:
 
-- vim configurations.
-- Global git ignore file.
-- ZSH ( [spaceship](https://github.com/denysdovhan/spaceship-prompt) theme )
-- JDK-8 and JDK-10
-- SBT
-- [Scalafmt](https://scalameta.org/scalafmt/)
+- wget, htop, zsh, make
+- vim configuration, plugins, shortcut.
+- Global ```.gitignore``` file.
+- ZSH ( [spaceship](https://github.com/denysdovhan/spaceship-prompt) theme)
+- OpenJDK **1.8** and Openjdk **11**.
+- Golang
+- SBT and global [Scalafmt](https://scalameta.org/scalafmt/) configuration.
+- Jetbrains Ultimate Edition
 
 ## Install
 

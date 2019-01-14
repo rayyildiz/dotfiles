@@ -21,6 +21,7 @@ function update() {
     sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
 
     sudo add-apt-repository ppa:linuxuprising/java
+    sudo add-apt-repository ppa:openjdk-r/ppa
 
     sudo apt-get update -y && sudo apt-get upgrade -y
 
@@ -42,29 +43,28 @@ function install_base() {
 
 # install developer software and dependencies
 function install_dev() {
-    echo "installing openjdk-8,openjdk-10, sbt"
+    echo "installing openjdk-8,openjdk-11, sbt"
     sudo apt-get install -y \
         openjdk-8-jdk \
         sbt
-        # openjdk-10-jdk
 
-    echo "install oracle jdk-10"
-    read -p "Do you wish to install Oracle JDK 10 [y/N]?" yn1
+    echo "install openjdk-11"
+    read -p "Do you wish to install Openjdk 11 [y/N]?" yn1
     case $yn1 in
-        [Yy]* )  sudo apt-get install -y oracle-java10-installer; break;;
-        * ) echo "JDK-10 won't install";;
+        [Yy]* )  sudo apt-get install -y openjdk-11-jdk; break;;
+        * ) echo "JDK-11 won't be installed";;
     esac
 
     read -p "Do you wish to install GOLANG [y/N]?" yn2
     case $yn2 in
         [Yy]* )  sudo snap install go --classic; break;;
-        * ) echo "Golang won't install";;
+        * ) echo "Golang won't be installed";;
     esac
 
     read -p "Do you wish to install Intellij IDEA Ultimate Edition [y/N]?" yn3
     case $yn3 in
         [Yy]* )  sudo snap install intellij-idea-ultimate --classic; break;;
-        * ) echo "intellij-idea-ultimate won't install";;
+        * ) echo "Intellij Idea Ultimate Edition won't be installed";;
     esac
 }
 
@@ -79,6 +79,7 @@ function setup_dev() {
     echo "installing zsh theme"
     git clone https://github.com/denysdovhan/spaceship-prompt.git "$HOME/.oh-my-zsh/custom/themes/spaceship-prompt"
     ln -s "$HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+    echo "Please edit ~/.zshrc file and change thema as ==> ZSH_THEME='spaceship' " 
 
     echo "install Vundle.vim plugin"
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -97,10 +98,10 @@ function setup_dev() {
 
 # Install other software (music player, ...)
 function install_other() {
-    read -p "Do you wish to install Intellij VLC [y/N]?" yn
+    read -p "Do you wish to install VLC [y/N]?" yn
     case $yn in
         [Yy]* )  sudo snap install vlc; break;;
-        * ) echo "VLC won't install";;
+        * ) echo "VLC won't be installed";;
     esac
 }
 
