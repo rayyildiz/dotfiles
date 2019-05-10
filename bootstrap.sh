@@ -18,7 +18,7 @@ function backup() {
 function update() {
     echo "add sbt key and reguired repositories"
     echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
-    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2EE0EA64E40A89B84B2DF73499E82A75642AC823
+    curl -sL "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add  
 
     sudo add-apt-repository ppa:linuxuprising/java
     sudo add-apt-repository ppa:openjdk-r/ppa
@@ -54,7 +54,7 @@ function install_dev() {
         [Yy]* )  sudo apt-get install -y openjdk-11-jdk; break;;
         * ) echo "JDK-11 won't be installed";;
     esac
-
+   
     read -p "Do you wish to install GOLANG [y/N]?" yn2
     case $yn2 in
         [Yy]* )  sudo snap install go --classic; break;;
