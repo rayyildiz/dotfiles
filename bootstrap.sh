@@ -12,6 +12,7 @@ function backup() {
     [[ -f $HOME/.vimrc ]] && cp -u -p -i $HOME/.vimrc $HOME/dotfiles_backup/.vimrc
     [[ -f $HOME/.scalafmt.conf ]] && cp -u -p -i $HOME/.scalafmt.conf $HOME/dotfiles_backup/.scalafmt.conf
     [[ -f $HOME/.gitignore ]] && cp -u -p -i $HOME/.gitignore $HOME/dotfiles_backup/.gitignore
+    [[ -f $HOME/.config/Code/User/settings.json ]] && cp -u -p -i $HOME/.config/Code/User/settings.json $HOME/dotfiles_backup/settings.json
 }
 
 # Update and upgrade ubuntu dependencies
@@ -91,6 +92,17 @@ function setup_dev() {
 
     echo "global ignore file"
     cp .gitignore $HOME/.gitignore
+
+    echo "installing vscode"
+    sudo snap install --classic code
+    mkdir -p $HOME/.config/Code/User
+    cp settings.json $HOME/.config/Code/User/settings.json
+
+
+    echo "install jetbrains mono fonts"
+    wget https://download.jetbrains.com/fonts/JetBrainsMono-2.001.zip  -O /tmp/JetBrainsMono.zip
+    unzip /tmp/JetBrainsMono.zip -d /tmp/JetBrainsMono 
+    sudo mv /tmp/JetBrainsMono/ttf/JetBrainsMono-*.ttf  /usr/share/fonts/
 
     echo "select default java version"
     sudo update-alternatives --config java
