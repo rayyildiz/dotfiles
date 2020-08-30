@@ -51,7 +51,26 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sublime git golang adb battery cabal colorize docker emacs heroku nvm pip python sudo svn)
+plugins=(
+  git 
+  golang 
+  adb 
+  battery 
+  cabal 
+  colorize 
+  docker 
+  docker-compose 
+  minikube
+  kubectl
+  mvn 
+  gradle
+  python 
+  yarn
+  npm
+  sdk
+  sudo
+  vscode
+)
 
 # User configuration
 
@@ -87,27 +106,13 @@ source $ZSH/oh-my-zsh.sh
 
 
 
-export GOPATH="/Users/rayyildiz/workspace/gopath"
+export GOPATH="$HOME/go"
 export GOBIN=$GOPATH/bin
-export GOAPP_ENGINE=/Developer/google-cloud-sdk/platform/google_appengine
-export MAVEN_HOME=/Developer/apache-maven-3.3.9
-export PYTHON2_HOME=/Users/rayyildiz/Library/Python/2.7
-export GRADLE_HOME=/Developer/gradle-3.1
-export ERL_PATH=/usr/local/Cellar/erlang/19.3/bin/erl
 
-export NVM_DIR="/Users/rayyildiz/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-export ACTIVATOR_HOME=/Developer/activator-dist-1.3.12
-export ANDROID_NDK=/Developer/android-ndk-r14b
-export ANDROID_HOME=/Users/rayyildiz/Library/Android/sdk
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home
-
-export PATH=$PATH:$GOBIN:$MAVEN_HOME/bin:$PYTHON2_HOME/bin
-export PATH=$PATH:$GRADLE_HOME/bin:$ERL_PATH
-export PATH=$PATH:$ACTIVATOR_HOME/bin:$ANDROID_NDK:$ANDROID_HOME/tools
-export PATH=$PATH:$GOAPP_ENGINE/goroot/bin
+export PATH=$PATH:$GOBIN:
 
 # NixOS
 if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
@@ -120,19 +125,10 @@ if [ -f ~/.cargo/env ]; then
 fi
 
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f /Developer/google-cloud-sdk/path.zsh.inc ]; then
-  source '/Developer/google-cloud-sdk/path.zsh.inc'
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f /Developer/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/Developer/google-cloud-sdk/completion.zsh.inc'
-fi
 eval $(/usr/libexec/path_helper -s)
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/rayyildiz/.sdkman"
-[[ -s "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/rayyildiz/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

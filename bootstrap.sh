@@ -104,6 +104,10 @@ function setup_dev() {
     unzip /tmp/JetBrainsMono.zip -d /tmp/JetBrainsMono 
     sudo mv /tmp/JetBrainsMono/ttf/JetBrainsMono-*.ttf  /usr/share/fonts/
 
+
+    echo "install sdkman"
+    curl -s "https://get.sdkman.io" | bash 
+
     echo "select default java version"
     sudo update-alternatives --config java
 }
