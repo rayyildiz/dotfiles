@@ -14,6 +14,6 @@ These files prepares a development environment for you. This bootstrap includes:
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/rayyildiz/dotfiles/master/bootstrap.sh | bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/rayyildiz/dotfiles/master/bootstrap.sh)"
 ```
 

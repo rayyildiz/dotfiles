@@ -160,6 +160,7 @@ function main() {
 		exit 1
 	fi
 
+    # [[ -s $LOCAL_FOLDER ]] && rm -rf $LOCAL_FOLDER
 
     git clone -c core.eol=lf -c core.autocrlf=false \
 		-c fsck.zeroPaddedFilemode=ignore \
@@ -173,7 +174,7 @@ function main() {
     su $USER -c true
 
     echo "${GREEN}installing software and depdendencies for ubuntu${RESET}"
-    backup
+    # backup
 
     install_base
     update
