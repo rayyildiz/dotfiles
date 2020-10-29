@@ -1,5 +1,6 @@
 # Dotfiles
 
+
 These files prepares a development environment for you. This bootstrap includes:
 
 - wget, htop, zsh, make
@@ -8,14 +9,11 @@ These files prepares a development environment for you. This bootstrap includes:
 - ZSH ( [spaceship](https://github.com/denysdovhan/spaceship-prompt) theme)
 - OpenJDK **1.8** and Openjdk **11**.
 - Golang
-- SBT and global [Scalafmt](https://scalameta.org/scalafmt/) configuration.
-- Jetbrains Ultimate Edition
+- Jetbrains Ultimate Edition (Optional)
 
 ## Install
 
 ```bash
-git clone https://github.com/rayyildiz/dotfiles.git
-cd dotfiles
-./bootstrap.sh ubuntu
+curl -fsSL https://raw.githubusercontent.com/rayyildiz/dotfiles/master/bootstrap.sh | bash
 ```
 

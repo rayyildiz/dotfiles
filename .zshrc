@@ -114,11 +114,6 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH:$GOBIN:
 
-# NixOS
-if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
-    source ~/.nix-profile/etc/profile.d/nix.sh
-fi
-
 # Rustlang
 if [ -f ~/.cargo/env ]; then
    source ~/.cargo/env
