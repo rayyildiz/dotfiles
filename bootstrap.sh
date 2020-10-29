@@ -70,34 +70,34 @@ function install_base() {
         git \
         htop \
         zsh \
-        gnupg2 
+        gnupg2  \
+        unzip
 }
 
 # install developer software and dependencies
 function install_dev() {
-    echo "${GREEN}installing openjdk-8,openjdk-11, sbt${RESET}"
+    echo "${GREEN}installing openjdk-8,openjdk-11${RESET}"
      apt-get install -y \
         openjdk-8-jdk
 
-    echo "install openjdk-11"
     read -p "${RED}Do you wish to install Openjdk 11 [y/N]?...${RESET}" yn
-    case $yn in
-        [Yy]* )   apt-get install -y openjdk-11-jdk; break;;
-        * ) echo "${GREEN}OpenJDK-11 won't be installed${RESET}";;
-    esac
+    if [ "$yn" = "y" ]; then
+        echo "${GREEN}installing openjdk-11${RESET}"
+        apt-get install -y openjdk-11-jdk;
+    fi
    
     read -p "${RED}Do you wish to install GOLANG [y/N]?...${RESET}" yn
-    case $yn in
-        [Yy]* ) [[ -s snap ]] && snap install go --classic;;
-        * ) echo "${GREEN}Golang won't be installed${RESET}";;
-    esac
+    if [ "$yn" = "y" ]; then
+        echo "${GREEN}installing Go${RESET}"
+        [[ -s snap ]] && snap install go --classic;;
+    fi
 
-    read -p "${RED}Do you wish to install Intellij IDEA Ultimate Edition [y/N]?...${RESET}" yn3
-    case $yn3 in
-        [Yy]* )  [[ -s snap ]] &&  snap install intellij-idea-ultimate --classic;;
-        * ) echo "${GREEN}Intellij Idea Ultimate Edition won't be installed${RESET}";;
-    esac
 
+    read -p "${RED}Do you wish to install Intellij IDEA Ultimate Edition [y/N]?...${RESET}" yn
+    if [ "$yn" = "y" ]; then
+        echo "${GREEN}installing Jetbrains IDEA${RESET}"
+        [[ -s snap ]] &&  snap install intellij-idea-ultimate --classic
+    fi
 }
 
 # su $USER -c true
