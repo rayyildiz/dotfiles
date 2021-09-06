@@ -89,7 +89,7 @@ function install_dev() {
     read -p "${RED}Do you wish to install GOLANG [y/N]?...${RESET}" yn
     if [ "$yn" = "y" ]; then
         echo "${GREEN}installing Go${RESET}"
-        [[ -s snap ]] && snap install go --classic;;
+        [[ -s snap ]] && snap install go --classic
     fi
 
 
